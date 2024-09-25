@@ -75,7 +75,17 @@ class AnaSayfa(QtWidgets.QMainWindow):
         secilenSinif = self.randevuEkleSayfasi.sinifSecComboBox.currentText()
         secilenTarih = self.randevuEkleSayfasi.dateTimeEdit.date().toPyDate()
         suankiTarih = datetime.date.today()
-        gunAdi = secilenTarih.strftime("%A")
+        gunlar = {
+    0: "Pazar",
+    1: "Pazartesi",
+    2: "Salı",
+    3: "Çarşamba",
+    4: "Perşembe",
+    5: "Cuma",
+    6: "Cumartesi"
+}
+
+        gunAdi = gunlar[secilenTarih.weekday()]
 
         if ders == "Ders Seçiniz" or secilenSinif == "Sınıf Seçiniz":
             QtWidgets.QMessageBox.warning(self.centralWidget(), "Hata", "Lütfen tüm alanları doldurun.")
