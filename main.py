@@ -76,13 +76,13 @@ class AnaSayfa(QtWidgets.QMainWindow):
         secilenTarih = self.randevuEkleSayfasi.dateTimeEdit.date().toPyDate()
         suankiTarih = datetime.date.today()
         gunlar = {
-    0: "Pazar",
-    1: "Pazartesi",
-    2: "Salı",
-    3: "Çarşamba",
-    4: "Perşembe",
-    5: "Cuma",
-    6: "Cumartesi"
+    0: "Pazartesi",
+    1: "Salı",
+    2: "Çarşamba",
+    3: "Perşembe",
+    4: "Cuma",
+    5: "Cumartesi",
+    6: "Pazar"
 }
 
         gunAdi = gunlar[secilenTarih.weekday()]
