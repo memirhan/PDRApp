@@ -10,11 +10,8 @@ import sqlite3
 import datetime
 import smtplib
 import json
-import locale
 
 class AnaSayfa(QtWidgets.QMainWindow):
-    locale.setlocale(locale.LC_TIME, 'tr_TR.UTF-8')
-
     def __init__(self):
         super().__init__()
         self.ui_anasayfa = Anasayfa()
