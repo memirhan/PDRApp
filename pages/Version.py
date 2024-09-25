@@ -32,13 +32,12 @@ class Ui_About(object):
         self.centralLabel.setWordWrap(True)
         self.centralLabel.setObjectName("centralLabel")
         
-        # Bilgileri buraya ekleyin
         self.centralLabel.setText("""
 Uygulama İsmi: PDR App<br><br> 
 Yapımcı: Muhammet Emirhan Sümer<br><br>                             
-Version: Kararlı 1.1<br><br>
+Version: Beta 1.2<br><br>
 Yapımı: 07.06.2024<br><br>
-Son Güncelleme: 21.09.2024
+Son Güncelleme: 24.09.2024
 """)
 
         self.logoLabel = QtWidgets.QLabel(self.centralwidget)
