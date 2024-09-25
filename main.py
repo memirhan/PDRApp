@@ -104,7 +104,7 @@ class AnaSayfa(QtWidgets.QMainWindow):
 
             senderMail = config['senderEmail']
             senderPassword = config['senderPassword']
-            toEmail = "bordosec@gmail.com"
+            toEmail = "sedacalkan1@gmail.com"
             subject = "Yeni Randevu Eklendi"
             message = f"""
             <html>
@@ -130,14 +130,10 @@ class AnaSayfa(QtWidgets.QMainWindow):
                 server.starttls()
                 server.login(senderMail, senderPassword)
                 server.sendmail(senderMail, toEmail, msg.as_string())
-
-            print("E-posta başarıyla gönderildi.")
-
+                
         except Exception as e:
-            print(f"E-posta gönderilemedi: {e}")
-
-    
-
+                pass
+            
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
