@@ -97,6 +97,8 @@ class RandevuEkle(object):
         self.dateTimeEdit.setDisplayFormat("dd.MM.yyyy") 
         self.dateTimeEdit.mousePressEvent = self.showCalendar
         self.calendarWidget.clicked.connect(self.updateDateTimeEdit)
+        self.calendarWidget.clicked.connect(lambda: self.showCalendar())
+
 
         self.sinifSecComboBox = QtWidgets.QComboBox(self.centralwidget)
         self.sinifSecComboBox.setGeometry(QtCore.QRect(590, 230, 121, 22))
@@ -158,7 +160,7 @@ class RandevuEkle(object):
         self.sinifSecComboBox.setItemText(0, _translate("MainWindow", "Sınıf Seçiniz"))
         self.dersSecComboBox.setItemText(0, _translate("MainWindow", "Ders Seçiniz"))
 
-    def showCalendar(self):
+    def showCalendar(self, event=None):
         self.calendarWidget.show()
 
     def updateDateTimeEdit(self):
