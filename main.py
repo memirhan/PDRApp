@@ -104,7 +104,7 @@ class AnaSayfa(QtWidgets.QMainWindow):
 
             senderMail = config['senderEmail']
             senderPassword = config['senderPassword']
-            toEmail = "sedacalkan1@gmail.com"
+            toEmail = "bordosec@gmail.com"
             subject = "Yeni Randevu Eklendi"
             message = f"""
             <html>
