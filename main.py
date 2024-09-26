@@ -137,6 +137,7 @@ class AnaSayfa(QtWidgets.QMainWindow):
                 server.starttls()
                 server.login(senderMail, senderPassword)
                 server.sendmail(senderMail, toEmail, msg.as_string())
+                print("Email gönderildi")
                 
         except Exception as e:
                 pass
